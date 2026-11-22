@@ -1,5 +1,6 @@
 package com.nguiraze.megas
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -18,10 +19,10 @@ class MainActivity : AppCompatActivity() {
         val botaoPausar = findViewById<Button>(R.id.botaoPausar)
 
         findViewById<Button>(R.id.botaoReset1).setOnClickListener {
-            textoSim1.text = "0/10"
+            textoSim1.text = "⁰/10"
         }
         findViewById<Button>(R.id.botaoReset2).setOnClickListener {
-            textoSim2.text = "0/10"
+            textoSim2.text = "⁰/10"
         }
 
         botaoPausar.setOnClickListener {
@@ -29,7 +30,11 @@ class MainActivity : AppCompatActivity() {
             botaoPausar.text = if (pausado) "Retomar" else "Pausar"
         }
 
-        listOf(R.id.botaoEnviar, R.id.botaoFila, R.id.botaoHistorico, R.id.botaoMeta)
+        findViewById<Button>(R.id.botaoEnviar).setOnClickListener {
+            startActivity(Intent(this, EnviarActivity::class.java))
+        }
+
+        listOf(R.id.botaoFila, R.id.botaoHistorico, R.id.botaoMeta)
             .forEach { id ->
                 findViewById<Button>(id).setOnClickListener {
                     Toast.makeText(this, "Em breve", Toast.LENGTH_SHORT).show()
