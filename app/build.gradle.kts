@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.laurentino.megas"
+    namespace = "com.nguiraze.megas"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.laurentino.megas"
+        applicationId = "com.nguiraze.megas"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
