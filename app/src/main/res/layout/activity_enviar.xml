@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050B1F"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar megas"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/campoNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Número do cliente"
+        android:inputType="phone"
+        android:maxLength="9"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#94A3B8" />
+
+    <EditText
+        android:id="@+id/campoMegas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Megabytes (100 a 10240)"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#94A3B8" />
+
+    <Button
+        android:id="@+id/botaoAdicionar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#1E40AF"
+        android:text="Adicionar à fila"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/textoEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#22C55E"
+        android:textSize="16sp" />
+</LinearLayout>
