@@ -5,6 +5,14 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
+data class PedidoFila(
+    val id: Long = 0,
+    val numeroCliente: String,
+    val megas: Int,
+    val estado: String = "NA_FILA",
+    val criadoEm: Long = System.currentTimeMillis()
+)
+
 class BancoFila(context: Context) :
     SQLiteOpenHelper(context, "fila.db", null, 1) {
 
